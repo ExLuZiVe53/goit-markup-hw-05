@@ -53,23 +53,21 @@
             <!-- Container -->
             <div class="container">
                 <h1 class="hero-title">Effective Solutions for Your Business</h1>
-                <button type="button" class="button primary">Order Service</button>
+                <button type="button" class="button primary" data-modal-open>Order Service</button>
+            </div>
+
+            <div class="backdrop is-hidden" data-modal>
+                <div class="modal">
+                    
+                    <button type="button" class="close" data-modal-close>
+                            <svg class="item-icons" width="8" height="8">
+                                <use href="./images/icon.svg#icon-close"></use>
+                            </svg>
+                    </button>
+                </div>
             </div>
         </section>
 
-        <button data-modal-open>Открыть модальное окно</button>
-
-        <div class="backdrop is-hidden" data-modal>
-            <div class="modal">
-                <p>
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur similique odio temporibus nesciunt quae
-                    repellat ipsa atque obcaecati rem, consectetur ea tempora ullam, minus necessitatibus, cum accusantium officia.
-                    Quae, quisquam!
-                </p>
-                <button data-modal-close>Закрыть</button>
-            </div>
-        </div> 
-        
         <!-- Section-1 -->
         <section class="section features">
             <!-- Container -->
