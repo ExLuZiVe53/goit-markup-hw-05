@@ -56,6 +56,20 @@
                 <button type="button" class="button primary">Order Service</button>
             </div>
         </section>
+
+        <button data-modal-open>Открыть модальное окно</button>
+
+        <div class="backdrop is-hidden" data-modal>
+            <div class="modal">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur similique odio temporibus nesciunt quae
+                    repellat ipsa atque obcaecati rem, consectetur ea tempora ullam, minus necessitatibus, cum accusantium officia.
+                    Quae, quisquam!
+                </p>
+                <button data-modal-close>Закрыть</button>
+            </div>
+        </div> 
+        
         <!-- Section-1 -->
         <section class="section features">
             <!-- Container -->
@@ -403,5 +417,7 @@
                 
         </div>
     </footer>
+    <!-- Put it in front of the body tag -->
+    <script src="./js/modal.js"></script>
 </body>
 </html>
