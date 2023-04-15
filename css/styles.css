@@ -77,6 +77,7 @@ img {
 .button.primary:active,
 .button.primary:focus {
     background-color: var(--btn-active-color);
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Header */
 .header {
@@ -146,6 +147,8 @@ ul.site-nav:nth-child(2n) {
     line-height: 1.5;
     letter-spacing: 0.02em;
     color: var(--primary-text-color);
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .site-nav .navigation:hover,
@@ -153,6 +156,8 @@ ul.site-nav:nth-child(2n) {
 .site-nav .navigation:active {
     color: var(--btn-active-color);
     background-color: transparent;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation.link.active::after {
@@ -190,12 +195,16 @@ ul.site-nav:nth-child(2n) {
     font-size: 16px;
     line-height: 1.5;
     letter-spacing: 0.02em;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .address-nav .navigation:hover,
 .address-nav .navigation:active,
 .address-nav .navigation:focus{
     color: var(--btn-active-color);
     background-color: transparent;
+
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Hero */
@@ -286,6 +295,16 @@ ul.site-nav:nth-child(2n) {
     cursor: pointer;
 }
 
+.close .item-icons:hover,
+.close .item-icons:active {
+    fill: var(--primary-bg-color);
+}
+
+.close:hover,
+.close:active {
+    background-color: var(--btn-active-color);
+}
+
 /* Section-1*/
 .section.features {
     padding-top: 120px;
@@ -366,6 +385,8 @@ ul.site-nav:nth-child(2n) {
     background-color: var(--akcent-color);
     justify-content: center;
     align-items: center;
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-icons {
@@ -375,6 +396,8 @@ ul.site-nav:nth-child(2n) {
 .socials-list-link:hover,
 .socials-list-link:focus {
     background-color: var(--icon-brands-hover-color);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Section-2 */
@@ -504,6 +527,7 @@ ul.site-nav:nth-child(2n) {
     height: 88px;
     border: 1px solid var(--icon-brands-color-border);
     border-radius: 4px;
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .icon-svg-brands {
@@ -514,6 +538,7 @@ ul.site-nav:nth-child(2n) {
 .list-link-brands:focus {
     border-color: var(--icon-brands-hover-color);
     color: var(--icon-brands-hover-color);
+    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Footer */
@@ -558,11 +583,15 @@ footer {
 
 .socials-list-link.footer {
     background-color: var(--akcent-color);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .socials-list-link.footer:hover, 
 .socials-list-link.footer:focus {
     background-color: var(--icon-green-color);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links-right.title {
@@ -612,6 +641,8 @@ footer {
     cursor: pointer;
     color: var(--akcent-color);
     background-color: var(--logo-akcent-color);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .button-filters:hover,
 .button-filters:focus {
@@ -619,6 +650,8 @@ footer {
     color: var(--primary-bg-color);
     border: 1px solid transparent;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
+
+    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Section-Galery */
@@ -635,11 +668,13 @@ footer {
 
 .galery-link {
     display: block;
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .galery-link:hover, 
 .galery-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
+    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .title-galery {
@@ -702,7 +737,7 @@ footer {
     background-color: var(--akcent-color);
 
     transform: translatey(100%);
-    transition: transform 250ms ease;
+    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .box:hover .overlay,
