@@ -18,6 +18,7 @@
     --icon-brands-color-border: #8E8F99;
 
     --modal-dairy-color: #FCFCFC;
+    --сubic: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Specialty */
@@ -71,13 +72,14 @@ img {
     font-weight: 500;
     font-size: 16px;
     text-align: center;
+
+    transition: 250ms var(--сubic);
 }
 
 .button.primary:hover, 
 .button.primary:active,
 .button.primary:focus {
     background-color: var(--btn-active-color);
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* Header */
 .header {
@@ -143,7 +145,7 @@ ul.site-nav:nth-child(2n) {
     font-style: normal;
     color: var(--primary-text-color);
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms var(--сubic);
 }
 
 .site-nav .navigation.active {
@@ -155,8 +157,6 @@ ul.site-nav:nth-child(2n) {
 .site-nav .navigation:active {
     color: var(--btn-active-color);
     background-color: transparent;
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .navigation.link.active::after {
@@ -192,15 +192,13 @@ ul.site-nav:nth-child(2n) {
     color: var(--title-text-color);
     font-weight: 400;
 
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: color 250ms var(--сubic);
 }
 .address-nav .navigation:hover,
 .address-nav .navigation:active,
 .address-nav .navigation:focus{
     color: var(--btn-active-color);
     background-color: transparent;
-
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Hero */
@@ -260,14 +258,17 @@ ul.site-nav:nth-child(2n) {
     background-color: rgba(46, 47, 66, 0.4);
     opacity: 1;
     visibility: visible;
-    transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: opacity 250ms var(--сubic), visibility 250ms var(--сubic);
 }
 
 .modal {
-    position: relative;
+    position: absolute;
 
-    width: 408px;
-    height: 576px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    min-width: 408px;
+    min-height: 576px;
 
     display: block;
     margin-left: auto;
@@ -289,11 +290,18 @@ ul.site-nav:nth-child(2n) {
     width: 24px;
     height: 24px;
     cursor: pointer;
+    transition: 250ms var(--сubic);
 }
 
-.close .item-icons:hover,
-.close .item-icons:active {
-    fill: var(--primary-bg-color);
+.close-icons {
+    fill: currentColor;
+}
+
+.close:hover,
+.close:active {
+    background-color: var(--btn-active-color);
+    color: var(--socials-icon-color);
+    cursor: pointer;
 }
 
 .close:hover,
@@ -382,7 +390,7 @@ ul.site-nav:nth-child(2n) {
     justify-content: center;
     align-items: center;
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms var(--сubic);
 }
 
 .socials-icons {
@@ -392,8 +400,6 @@ ul.site-nav:nth-child(2n) {
 .socials-list-link:hover,
 .socials-list-link:focus {
     background-color: var(--icon-brands-hover-color);
-
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Section-2 */
@@ -523,7 +529,7 @@ ul.site-nav:nth-child(2n) {
     height: 88px;
     border: 1px solid var(--icon-brands-color-border);
     border-radius: 4px;
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms var(--сubic);
 }
 
 .icon-svg-brands {
@@ -534,7 +540,6 @@ ul.site-nav:nth-child(2n) {
 .list-link-brands:focus {
     border-color: var(--icon-brands-hover-color);
     color: var(--icon-brands-hover-color);
-    transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Footer */
@@ -580,14 +585,12 @@ footer {
 .socials-list-link.footer {
     background-color: var(--akcent-color);
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms var(--сubic);
 }
 
 .socials-list-link.footer:hover, 
 .socials-list-link.footer:focus {
     background-color: var(--icon-green-color);
-
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .social-links-right.title {
@@ -638,7 +641,8 @@ footer {
     color: var(--akcent-color);
     background-color: var(--logo-akcent-color);
 
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
+    transition: background-color 250ms var(--сubic), color 250ms var(--сubic), border 250ms var(--сubic), box-shadow 250ms var(--сubic)
 }
 .button-filters:hover,
 .button-filters:focus {
@@ -646,8 +650,6 @@ footer {
     color: var(--primary-bg-color);
     border: 1px solid transparent;
     box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 2px 1px rgba(0, 0, 0, 0.08), 0px 2px 2px rgba(0, 0, 0, 0.12);
-
-    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /* Section-Galery */
@@ -664,13 +666,13 @@ footer {
 
 .galery-link {
     display: block;
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: 250ms var(--сubic);
 }
 
 .galery-link:hover, 
 .galery-link:focus {
     box-shadow: 0px 1px 6px rgba(46, 47, 66, 0.08), 0px 1px 1px rgba(46, 47, 66, 0.16), 0px 2px 1px rgba(46, 47, 66, 0.08);
-    transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    
 }
 
 .title-galery {
@@ -733,7 +735,7 @@ footer {
     background-color: var(--akcent-color);
 
     transform: translatey(100%);
-    transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+    transition: transform 250ms var(--сubic), visibility 250ms var(--сubic);
 }
 
 .galery-link:hover .overlay,
