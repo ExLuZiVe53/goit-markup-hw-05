@@ -73,7 +73,7 @@ img {
     font-size: 16px;
     text-align: center;
 
-    transition: 250ms var(--сubic);
+    transition: background-color 250ms var(--сubic);
 }
 
 .button.primary:hover, 
@@ -288,7 +288,7 @@ ul.site-nav:nth-child(2n) {
     width: 24px;
     height: 24px;
     cursor: pointer;
-    transition: 250ms var(--сubic);
+    transition: background-color 250ms var(--сubic), color 250ms var(--сubic);
 }
 
 .close-icons {
@@ -388,7 +388,7 @@ ul.site-nav:nth-child(2n) {
     justify-content: center;
     align-items: center;
 
-    transition: 250ms var(--сubic);
+    transition: background-color 250ms var(--сubic);
 }
 
 .socials-icons {
