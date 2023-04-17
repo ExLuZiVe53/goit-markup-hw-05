@@ -156,7 +156,6 @@ ul.site-nav:nth-child(2n) {
 .site-nav .navigation:focus,
 .site-nav .navigation:active {
     color: var(--btn-active-color);
-    background-color: transparent;
 }
 
 .navigation.link.active::after {
@@ -198,7 +197,6 @@ ul.site-nav:nth-child(2n) {
 .address-nav .navigation:active,
 .address-nav .navigation:focus{
     color: var(--btn-active-color);
-    background-color: transparent;
 }
 
 /* Hero */
@@ -477,7 +475,7 @@ ul.site-nav:nth-child(2n) {
 
 .employers-list .text{
     margin-top: 0;
-    margin-bottom: 0;
+    margin-bottom: 8px;
 
     text-align: center;
     font-weight: 400;
@@ -529,7 +527,7 @@ ul.site-nav:nth-child(2n) {
     height: 88px;
     border: 1px solid var(--icon-brands-color-border);
     border-radius: 4px;
-    transition: 250ms var(--сubic);
+    transition: border-color 250ms var(--сubic), color 250ms var(--сubic);
 }
 
 .icon-svg-brands {
@@ -585,7 +583,7 @@ footer {
 .socials-list-link.footer {
     background-color: var(--akcent-color);
 
-    transition: 250ms var(--сubic);
+    transition: background-color 250ms var(--сubic);
 }
 
 .socials-list-link.footer:hover, 
@@ -666,7 +664,7 @@ footer {
 
 .galery-link {
     display: block;
-    transition: 250ms var(--сubic);
+    transition: box-shadow 250ms var(--сubic);
 }
 
 .galery-link:hover, 
